@@ -1,24 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/home/Home";
+import React, { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import CalendarPage from "./components/calendar/CalendarPage";
+import Login from "./components/login/Login";
+import SignUp from "./components/login/SignUp";
+import Feed from "./components/feed/Feed";
+import NavBar from "./components/navBar/NavBar";
+import Homes from "./components/navBar/Homes";
 
+// sudo service postgresql start
 function App() {
+  const [user, setUser] = useState(null);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    fetch("/posts")
+      .then((r) => r.json())
+      .then((data) => setPosts(data));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar user={user} setUser={setUser} />
+      <div>
+        {user ? (
+          <>
+            <Routes>
+              <Route
+                path="/home"
+                element={<Home user={user} posts={posts} setPosts={setPosts} />}
+              />
+              <Route
+                path="/calendar"
+                element={<CalendarPage user={user} setPosts={setPosts} />}
+              />
+              <Route
+                path="/feed"
+                element={<Feed user={user} posts={posts} setPosts={setPosts} />}
+              />
+            </Routes>
+          </>
+        ) : (
+          <>
+            <Routes>
+              <Route path="/" element={<Homes user={user} />} />
+              <Route path="/signup" element={<SignUp setUser={setUser} />} />
+              <Route path="/login" element={<Login setUser={setUser} />} />
+            </Routes>
+          </>
+        )}
+      </div>
+    </>
   );
 }
 

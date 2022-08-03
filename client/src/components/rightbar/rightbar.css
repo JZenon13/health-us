@@ -1,0 +1,124 @@
+.rightbar {
+  flex: 3.5;
+}
+
+.raightbarWrapper {
+  padding: 20px 20px 0 0;
+}
+
+.birthdayImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-left: 250px;
+}
+
+.birthdayText {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.birthdayContainer {
+  display: flex;
+  align-items: center;
+}
+
+.rightbarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rightbarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rightbarProfileImgContainer {
+  margin-right: 10px;
+  position: relative;
+}
+
+.rightbarProfileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightbarOnline {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  top: -10;
+  right: 0;
+  border: 2px solid gray;
+}
+
+.rightbarUsername {
+  font-weight: 500;
+}
+
+.rightbarTitle {
+  margin-bottom: 20px;
+  margin-left: 225px;
+}
+
+.workoutCard {
+  border-style: groove;
+  border-color: rgb(14, 12, 57);
+  border-width: 10px;
+  margin-bottom: 20px;
+  padding: 999px;
+  box-sizing: content-box;
+  width: fit-content;
+  height: 320px;
+  padding: 5px;
+  display: inline-flex;
+  background-color: rgba(238, 174, 202, 1);
+  overflow: hidden;
+}
+
+.centerStuff {
+  text-align: center;
+  margin-left: 225px;
+  margin-top: 1px;
+}
+
+.hereButton {
+  border: rgba(238, 174, 202, 1);
+  padding: 7px;
+  border-radius: 5px;
+  background-color: rgba(148, 187, 233, 1);
+  font-weight: 500;
+  margin-right: 30%;
+  margin-left: 250px;
+  margin-bottom: 1%;
+  cursor: pointer;
+  color: rgb(14, 12, 57);
+  display: block;
+  width: 25%;
+}
+
+.thumbsUp {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin-left: -75px;
+  margin-top: 225px;
+  margin-bottom: 100px;
+  margin-right: 30px;
+}
+
+.description {
+  padding: 10px;
+  margin-left: -300px;
+  margin-top: 75px;
+  margin-right: 50px;
+}
