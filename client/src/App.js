@@ -51,6 +51,7 @@ function App() {
         ) : (
           <>
             <Routes>
+              <Route path="/home" element={<Homes user={user} />} />
               <Route path="/" element={<Homes user={user} />} />
               <Route path="/signup" element={<SignUp setUser={setUser} />} />
               <Route path="/login" element={<Login setUser={setUser} />} />

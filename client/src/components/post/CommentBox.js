@@ -10,7 +10,8 @@ function CommentBox({
   eachPostComment,
 }) {
   const [commentText, setCommentText] = useState("");
-
+  const [userComment, setUserComment] = useState(false);
+  const [userSays, setUserSays] = useState([]);
   useEffect(() => {
     fetch(`/posts/${postID}`)
       .then((r) => r.json())
@@ -18,9 +19,10 @@ function CommentBox({
   }, [commentBox]);
 
   const eachComment = eachPostComment.comments?.map((comment) => {
+    console.log(comment);
     return (
       <>
-        <h3>{user.username} says</h3>
+        <h3>{comment.user_id} says</h3>
         <p key={comment.id} className="postCommentText">
           {comment.text}
         </p>

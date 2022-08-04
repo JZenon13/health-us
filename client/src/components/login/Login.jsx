@@ -22,9 +22,9 @@ function Login({ setUser }) {
   return (
     <div className="logInPage">
       <form onSubmit={handleSubmit}>
-        <h1 className="centerStuff">Login</h1>
-        <label className="centerStuff" htmlFor="username">
-          Email
+        <h1 className="centerLogin">Login</h1>
+        <label className="centerLogin" htmlFor="username">
+          Username
         </label>
         <input
           type="text"
@@ -33,7 +33,7 @@ function Login({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <label className="centerStuff" htmlFor="password">
+        <label className="centerLogin" htmlFor="password">
           Password
         </label>
         <input

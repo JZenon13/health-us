@@ -30,10 +30,10 @@ function SignUp({ setUser }) {
     <div className="signUpPage">
       <div className="signUpPage">
         <form onSubmit={handleSubmit}>
-          <h1 className="centerStuff">
+          <h1 className="centerSignUp">
             <b>Health Us</b>
           </h1>
-          <label className="centerStuff" htmlFor="username">
+          <label className="centerSignUp" htmlFor="username">
             Username
           </label>
           <input
@@ -43,7 +43,7 @@ function SignUp({ setUser }) {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label className="centerStuff" htmlFor="username">
+          <label className="centerSignUp" htmlFor="username">
             Email
           </label>
           <input
@@ -53,7 +53,7 @@ function SignUp({ setUser }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label className="centerStuff" htmlFor="password">
+          <label className="centerSignUp" htmlFor="password">
             Password
           </label>
           <input
@@ -63,7 +63,7 @@ function SignUp({ setUser }) {
             onChange={(e) => setPassword(e.target.value)}
             autoComplete="current-password"
           />
-          <label htmlFor="password" className="centerStuff">
+          <label htmlFor="password" className="centerSignUp">
             Password Confirmation
           </label>
           <input

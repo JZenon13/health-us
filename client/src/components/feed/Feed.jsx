@@ -10,10 +10,10 @@ function Feed({ user, posts, setPosts, search }) {
     fetch("/posts")
       .then((r) => r.json())
       .then((data) => setFeed(data));
-  }, [showComments]);
+  }, []);
 
-  const filteredPosts = feed.filter((f) =>
-    f.user.username.toLowerCase().includes(search.toLowerCase())
+  let filteredPosts = feed?.filter((f) =>
+    f.user.username.toLowerCase().includes(search)
   );
 
   const everyPost = filteredPosts.map((post) => {

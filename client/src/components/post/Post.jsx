@@ -8,6 +8,7 @@ function Post({ post, user, setPosts, showComments, setShowComments }) {
   const [postText, setPostText] = useState(post.text);
   const [commentBox, setCommentBox] = useState(false);
   const [eachPostComment, setEachPostComment] = useState([]);
+  const [userPost, setUserPost] = useState(false);
 
   const likeHandler = () => {
     setLike(likes + 1);

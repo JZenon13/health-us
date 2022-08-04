@@ -5,7 +5,7 @@ function Sidebar({ user }) {
   const [friendList, setFriendList] = useState([]);
   const [showMore, setShowMore] = useState(false);
   useEffect(() => {
-    fetch(`/friends/${user.id}`)
+    fetch(`/users/${user.id}/friends`)
       .then((res) => res.json())
       .then((data) => setFriendList(data));
   }, []);
@@ -13,14 +13,23 @@ function Sidebar({ user }) {
   function handleShow() {
     setShowMore(!showMore);
   }
+
+  console.log(friendList);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
+        <span className="sidebarListItemText">
+          <u>Friend List</u>
+        </span>
         <ul className="sidebarList">
           <li className="sidebarListItem">
-            <span className="sidebarListItemText">
-              <u>Friend List</u>
-            </span>
+            {friendList?.map((friend) => {
+              return (
+                <li key={friend.id} className="sidebarListItem">
+                  {friend.name}
+                </li>
+              );
+            })}
           </li>
         </ul>
         <button className="sidebarButton" onClick={handleShow}>
@@ -28,10 +37,6 @@ function Sidebar({ user }) {
         </button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          {friendList?.map((friend) => {
-            return <li className="sidebarFriend">{friend.name}</li>;
-          })}
-
           <span className="sidebarFriendName">{user.username}</span>
         </ul>
       </div>
