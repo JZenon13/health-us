@@ -7,14 +7,31 @@ function Sidebar({ user }) {
   useEffect(() => {
     fetch(`/users/${user.id}/friends`)
       .then((res) => res.json())
-      .then((data) => setFriendList(data));
+      .then((data) => setFriendList(data.splice(0, 1)));
   }, []);
 
   function handleShow() {
     setShowMore(!showMore);
+
+    {
+      showMore
+        ? fetch(`/users/${user.id}/friends`)
+            .then((res) => res.json())
+            .then((data) => setFriendList(data.splice(0, 1)))
+        : fetch(`/users/${user.id}/friends`)
+            .then((res) => res.json())
+            .then((data) => setFriendList(data));
+    }
   }
 
-  console.log(friendList);
+  // const someFriends = friendList?.map((friend) => {
+  //   return (
+  //     <li key={friend.id} className="sidebarListItem">
+  //       {friend.name}
+  //     </li>
+  //   );
+  // });
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">

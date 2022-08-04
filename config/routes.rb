@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  devise_scope :user do
-  get 'users', to: 'devise/sessions#new'
-  end
-
   resources :friend_messages
   resources :messages, only: [:index]
   resources :posts, only:[:index, :show, :update, :create, :destroy]

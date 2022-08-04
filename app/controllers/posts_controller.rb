@@ -7,8 +7,7 @@ class PostsController < ApplicationController
 
     def show 
         post = Post.find(params[:id])
-        # comment = Comment.find(params[:comment_id])
-        render json: post 
+        render json: post.comments, include: :user
      
     end
 

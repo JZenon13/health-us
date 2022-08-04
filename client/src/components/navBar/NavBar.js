@@ -21,7 +21,7 @@ function NavBar({ user, setUser }) {
         {user ? (
           <>
             <Link to="/calendar">Calendar</Link>
-            <Link to="/feed">Feed</Link>
+            {/* <Link to="/feed">Feed</Link> */}
 
             <button onClick={handleLogoutClick}>Logout</button>
           </>

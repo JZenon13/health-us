@@ -18,11 +18,10 @@ function CommentBox({
       .then((data) => setShowComments(data));
   }, [commentBox]);
 
-  const eachComment = eachPostComment.comments?.map((comment) => {
-    console.log(comment);
+  const eachComment = showComments?.map((comment) => {
     return (
       <>
-        <h3>{comment.user_id} says</h3>
+        <h3>{comment.user.username} says</h3>
         <p key={comment.id} className="postCommentText">
           {comment.text}
         </p>

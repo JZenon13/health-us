@@ -20,7 +20,14 @@ images =   [ 'https://www.helpguide.org/wp-content/uploads/woman-exercising-on-y
         'https://www.cnet.com/a/img/resize/2f0e36e8c80cf6a3ad1d38af4118dcaaed15ac45/2020/02/11/7f7bbb84-ead8-4ac2-ba55-734b90507737/gettyimages-583690223.jpg?auto=webp&fit=crop&height=675&width=1200',
         'https://static.ffx.io/images/$zoom_0.356%2C$multiply_0.9735%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_0/t_crop_custom/q_86%2Cf_auto/6761d0e91bb898188bebe3587ddb52c36322ede2',
         'https://www.mensjournal.com/wp-content/uploads/2015/03/singleRDL.jpg?quality=86&strip=all',
-        'https://images.everydayhealth.com/images/cs-exercise-modifications-for-rheumatoid-arthritis-1440x810.jpg'
+        'https://images.everydayhealth.com/images/cs-exercise-modifications-for-rheumatoid-arthritis-1440x810.jpg',
+        'https://www.pilatesplatinum.com/wp-content/uploads/2020/02/backlit-beach-dawn-dusk-588561.jpg',
+        'https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTY0OTE4NzcxMzY0OTMwODc3/yoga-gettyimages-1142820079.jpg',
+        'https://www.byrdie.com/thmb/If3_PukJYyv4Ll3cTNj1tjBi-20=/735x0/yogapose-4a62b2a4d57e4f61a4885003b2e0c47b.jpg',
+        'https://www.anahana.com/hubfs/female-coach-correcting-hatha-yoga-beginner-at-group-class-700-1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/b/b5/Uttitha_Trikonasana.jpg',
+        'https://images.squarespace-cdn.com/content/v1/5abc2d09da02bc72cdaea375/1522282597315-1EY2Y9C5OWXLI25HFV92/800-0425_Simply_Yoga_Susan_02.jpg'
+
     ]
 50.times do
 User.create(username:  Faker::Name.name, email:Faker::Internet.email, password: "password")
