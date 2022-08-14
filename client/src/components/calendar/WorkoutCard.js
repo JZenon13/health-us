@@ -46,7 +46,7 @@ function WorkoutCard({
             })}
           </p>
           <p>Total Time: {newExercise.total_time}hrs!</p>
-          <label>How was it? </label>
+          <label>Explain? </label>
           <input
             type="text"
             placeholder="Details!"
