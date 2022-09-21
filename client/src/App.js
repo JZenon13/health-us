@@ -16,6 +16,7 @@ function App() {
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
+        console.log(r);
         r.json().then((user) => setUser(user));
       }
     });
