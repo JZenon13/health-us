@@ -7,11 +7,9 @@ function CommentBox({
   setShowComments,
   showComments,
   commentBox,
-  eachPostComment,
 }) {
   const [commentText, setCommentText] = useState("");
-  const [userComment, setUserComment] = useState(false);
-  const [userSays, setUserSays] = useState([]);
+
   useEffect(() => {
     fetch(`/posts/${postID}`)
       .then((r) => r.json())

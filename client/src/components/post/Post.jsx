@@ -8,7 +8,6 @@ function Post({ post, user, setPosts, showComments, setShowComments }) {
   const [postText, setPostText] = useState(post.text);
   const [commentBox, setCommentBox] = useState(false);
   const [eachPostComment, setEachPostComment] = useState([]);
-  const [userPost, setUserPost] = useState(false);
 
   const likeHandler = () => {
     setLike(likes + 1);
@@ -58,7 +57,6 @@ function Post({ post, user, setPosts, showComments, setShowComments }) {
           <div className="postTopLeft">
             <img className="postProfileImg" src="/images/person.jpg" alt="" />
             <span className="postUsername">{post.user.username}</span>
-            {/* <span className="postDate">posted 5min ago</span> */}
           </div>
           <div className="postTopRight"></div>
         </div>

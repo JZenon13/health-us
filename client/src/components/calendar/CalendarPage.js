@@ -1,20 +1,11 @@
 import "./calendarPage.css";
-import format from "date-fns/format";
-import getDay from "date-fns/getDay";
-import parse from "date-fns/parse";
-import startOfWeek from "date-fns/startOfWeek";
 import React, { useState, useEffect } from "react";
-import {
-  Calendar,
-  dateFnsLocalizer,
-  momentLocalizer,
-} from "react-big-calendar";
+import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-datepicker/dist/react-datepicker.css";
 import NewWorkout from "./NewWorkout";
 
-const locales = { "en-US": require("date-fns/locale/en-US") };
 const localizer = momentLocalizer(moment);
 
 function CalendarPage({ user, setPosts }) {

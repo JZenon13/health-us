@@ -3,7 +3,6 @@ import "./rightbar.css";
 import RandomWorkout from "./RandomWorkout";
 
 function Rightbar() {
-  const [random, setRandom] = useState("");
   const [showRandom, setShowRandom] = useState(false);
   const randomExercise = [
     {

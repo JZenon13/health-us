@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./navBar.css";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
   function handleLogoutClick() {

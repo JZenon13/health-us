@@ -8,7 +8,6 @@ import Feed from "./components/feed/Feed";
 import NavBar from "./components/navBar/NavBar";
 import Homes from "./components/navBar/Homes";
 
-// sudo service postgresql start
 function App() {
   const [user, setUser] = useState(null);
   const [posts, setPosts] = useState([]);

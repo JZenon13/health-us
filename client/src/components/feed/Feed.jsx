@@ -3,7 +3,7 @@ import Share from "../share/Share";
 import Post from "../post/Post";
 import "./feed.css";
 
-function Feed({ user, posts, setPosts, search }) {
+function Feed({ user, setPosts, search }) {
   const [feed, setFeed] = useState([]);
   const [showComments, setShowComments] = useState([]);
   useEffect(() => {

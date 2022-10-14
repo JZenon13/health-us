@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./workoutCard.css";
-import { Calendar } from "react-big-calendar";
+
 function WorkoutCard({
   setWorkoutCard,
   workoutCard,
@@ -61,7 +61,7 @@ function WorkoutCard({
           <button className="close-modal" onClick={toggleClose}>
             CLOSE
           </button>
-          {/* <div className="smallCalendar">{mainCalendar}</div> */}
+
           <button onClick={handleNewPost}>Post to Feed</button>
         </div>
       </div>

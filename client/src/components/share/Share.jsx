@@ -59,15 +59,6 @@ function Share({ user, setPosts }) {
                 />
               ) : null}
             </div>
-            {/* <div className="shareOption">
-              <span className="shareOptionText">Exercise</span>
-            </div> */}
-            {/* <div className="shareOption">
-              <span className="shareOptionText">Location</span>
-            </div>
-            <div className="shareOption">
-              <span className="shareOptionText">Feelings</span>
-            </div> */}
           </div>
           <button
             className="shareButton"
